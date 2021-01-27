@@ -15,10 +15,16 @@
 
 
         <div id="new-form">
-            <template>
-                <el-table :data="tableData" style="width: 100%" cell-style="border: none;" header-cell-style="border: none;">
+            <template >
+                <el-table :data="tableData" 
+                            style="width: 100%;" 
+                            cell-style="border: none; 
+                                        margin: 0px;
+                                        padding: 0px;" 
+                            header-cell-style="border: none;" 
+                            fit='false'>
                     <el-table-column>
-                         <template slot-scope="scope" v-if="targetType==scope.row.type || targetType=='全部'"> 
+                        <template slot-scope="scope" v-if="targetType==scope.row.type || targetType=='全部'"> 
                             <div id="new-form-div">
                                 <div id="new-form-div-img">
                                 </div>
@@ -28,17 +34,10 @@
                                         <div id="new-infor-date">{{scope.row.date}}</div>
                                     </div>
                                     <div id="new-form-title">
-                                        {{scope.row.title}}{{scope.row.title}}{{scope.row.title}}{{scope.row.title}}
-                                        {{scope.row.title}}{{scope.row.title}}{{scope.row.title}}
+                                    {{scope.row.title}}
                                     </div>
                                     <div id="new-form-summary">
-                                        {{scope.row.summary}}{{scope.row.summary}}{{scope.row.summary}}{{scope.row.summary}}
-                                        {{scope.row.summary}}{{scope.row.summary}}{{scope.row.summary}}{{scope.row.summary}}
-                                       {{scope.row.summary}}{{scope.row.summary}}{{scope.row.summary}}{{scope.row.summary}}
-                                       {{scope.row.summary}}{{scope.row.summary}}{{scope.row.summary}}{{scope.row.summary}}
-                                       {{scope.row.summary}}{{scope.row.summary}}{{scope.row.summary}}{{scope.row.summary}}
-                                       {{scope.row.summary}}{{scope.row.summary}}{{scope.row.summary}}{{scope.row.summary}}
-                                       {{scope.row.summary}}{{scope.row.summary}}{{scope.row.summary}}{{scope.row.summary}}
+                                    {{scope.row.summary}}
                                     </div>
 
                                     <div id="new-button"> 
@@ -70,18 +69,18 @@
         tableData: [{
           type:'新闻',
           date: '2016-05-02',
-          title: '重大新闻',
-          summary: '内容简介'
+          title: '重大新闻重大新闻重大新闻重大新闻重大新闻重大新闻重大新闻',
+          summary: '内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介'
         }, {
           type:'通知',
           date: '2016-05-04',
-          title: '重大新闻',
-          summary: '内容简介'
+          title: '重大新闻重大新闻重大新闻重大新闻重大新闻重大新闻重大新闻',
+          summary: '内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介'
         }, {
           type:'咨询',
           date: '2016-05-01',
-          title: '重大新闻',
-          summary: '内容简介'
+          title: '重大新闻重大新闻重大新闻重大新闻重大新闻重大新闻重大新闻',
+          summary: '内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介'
         }]
 
       };
@@ -138,6 +137,7 @@
             width: 90%;
         }
             #new-form-div{
+                margin-top: 15px;
                 width: 100%;
                 height: 310px;
                 border: 2px solid rgb(212, 212, 212);
