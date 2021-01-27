@@ -1,86 +1,79 @@
 <template>
     <div>
-        <div>
-  <el-input   type="mobile" placeholder="请输入手机号" v-model="input1">
+        <div style="margin-top: 10px">
+           <p style="line-height:0; margin-bottom:5px;">
+        <span style= "font-weight:700; 
+        font-size:17px; 
+        color:rgba(51, 51, 51, 1); 
+        font-style:normal; 
+        letter-spacing:0px; 
+        line-height:25px; 
+        text-decoration:none;">快捷登录</span>
+           </p>
+       </div>
+           <div  style="width: 64px; 
+           height: 3px; 
+           left: 1284px; 
+           top: 347px; 
+           z-index: 16; 
+           background-color: rgb(255, 158, 0); 
+           border: none; font-size: 14px; 
+           padding: 0px; text-align: center; 
+           line-height: 20px; font-weight: normal; 
+           font-style: normal; opacity: 1;">
+           <div class="text" style="padding: 0px;">
+               <p>&nbsp;</p>
+           </div>
+           </div>
+           <div style="width: 90px; 
+           height: 34px; 
+           left: 1403px; 
+           top: 315px;
+           z-index: 12; 
+           font-size: 14px; 
+           text-align: left; 
+           font-weight: normal; 
+           font-style: normal; 
+           opacity: 1;">
+           <div class="rich-text">
+               <p style="line-height:0; margin-bottom:5px;">
+                   <span style=" font-weight:400; 
+                   font-size:17px; 
+                   color:rgba(102, 102, 102, 1); 
+                   font-style:normal; 
+                   letter-spacing:0px; 
+                   line-height:25px; 
+                   text-decoration:none;">密码登录</span>
+                   </p>
+                   </div>
+                   <div class="region gesture "></div>
+                   </div>
+       
+ <el-form   label-width="80px">
+<div>
+  <el-input placeholder="请输入手机号" v-model="input1">
     <template slot="prepend">+86</template>
   </el-input>
 </div>
+
 <div style="margin-top: 15px;">
-  <el-input type="code" placeholder ="请输入短信验证码" v-model="input2">
+  <el-input placeholder="请输入短信验证码" v-model="input2">
     <template slot="append">获取短信验证码</template>
   </el-input>
 </div>
-     <input type="password" placeholder="请输入密码">
-     <div class="region gesture " style="display: none;"></div>
-     <div style="width: 27px; 
-     height: 27px; 
-     left: 373px; 
-     top: 17px; 
-     z-index: 7; 
-     border-color: rgb(187, 187, 187); 
-     border-width: 0px; 
-     border-style: solid; 
-     color: rgb(153, 153, 153); 
-     font-weight: normal; 
-     font-style: normal; 
-     opacity: 1;">
-     </div>
-      <div class="region gesture " style="display: none;"></div>
-     <input type="name" placeholder="请输入姓名">
-     <input type="perfession" placeholder="请输入专业">
-     <div class="region gesture " style="display: none;"></div>
-    <input type="class" placeholder="请输入班级">
-    <input type="number" placeholder="请输入学号">
-  
- 
-           
-   <p style="line-height:0; margin-bottom:5px;">
-       <label class="Android-Check">
-    <input type="checkbox">
-    <span class="CheckState">
-        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="10" viewBox="0 0 14 10">
-            </svg>
-            </span>
-            </label>
-       <span  style="font-weight:400; 
-       font-size:12px; 
-       color:rgba(102, 102, 102, 1); 
-       font-style:normal; 
-       letter-spacing:0px; 
-       line-height:18px; 
-       text-decoration:none;">我已同意 </span>
-       <span style=" font-weight:400; 
-       font-size:12px; 
-       color:rgba(255, 158, 0, 1); 
-       font-style:normal; 
-       letter-spacing:0px; 
-       line-height:18px; 
-       text-decoration:none;">《###使用协议》</span>
-       <span  style=" font-weight:400; 
-       font-size:12px; 
-       color:rgba(102, 102, 102, 1); 
-       font-style:normal; 
-       letter-spacing:0px; 
-       line-height:18px; 
-       text-decoration:none;">和 </span>
-       <span  style=" font-weight:400; 
-       font-size:12px; 
-       color:rgba(255, 158, 0, 1); 
-       font-style:normal; 
-       letter-spacing:0px; 
-       line-height:18px; 
-       text-decoration:none;">《用户隐私协议》</span>
-       </p>
-
-<el-button type="warning" @click="onSubmit">注册</el-button>
- <p style="line-height:0; margin-bottom:5px;">
+ <el-button type="warning" @click="onSubmit">登陆</el-button>
+<div class="text" style="padding: 0px;">
+     <el-button style="color:#ff9e00">微信扫码登录</el-button>
+ </div>
+    </el-form>
+     <p style="line-height:0; margin-bottom:5px;">
 <span style=" font-weight:400; 
      font-size:14px;
      color:rgb(102, 102, 102); 
      font-style:normal; 
      letter-spacing:0px; 
      line-height:20px; 
-     text-decoration:none;">已有账号？</span>
+     text-decoration:none;">没有账号？</span>
      </p>
      <p style="line-height:0; margin-bottom:5px;">
        <span style="font-weight:700; 
@@ -89,11 +82,11 @@
         font-style:normal; 
         letter-spacing:0px; 
         line-height:20px; 
-        text-decoration:none;">立即登录</span>
+        text-decoration:none;">立即注册</span>
      </p>
-
     </div>
 </template>
+
 <script>
 export default {
     data(){
@@ -101,6 +94,12 @@ export default {
 
         }
     },
-  
+    mounted(){
+        console.log(this.$route.query.id,this.$route.query.name)
+            // console.log(this.$route.query.id)
+    },
+    created(){
+
+    },
 }
 </script>
