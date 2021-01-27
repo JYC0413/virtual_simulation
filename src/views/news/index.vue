@@ -40,7 +40,12 @@
                                        {{scope.row.summary}}{{scope.row.summary}}{{scope.row.summary}}{{scope.row.summary}}
                                        {{scope.row.summary}}{{scope.row.summary}}{{scope.row.summary}}{{scope.row.summary}}
                                     </div>
-                                    <el-button type="text" style="color:black;" id="news-content">默认按钮 <i class="el-icon-right"></i></el-button>
+
+                                    <div id="new-button"> 
+                                        <el-button type="text" style="color:black;" id="news-content">默认按钮</el-button>
+                                        <div id="news-content-img"></div>
+                                    </div>
+                                    
                                 </div>
                             </div>
                         </template>
@@ -192,11 +197,21 @@
                         color: black;
                         font-size: 18px;
                     }
-                    #news-content{
-                        font-size: 18px;
-                        font-weight: 900;
-                        /* border: 1px solid red; */
-                        margin-left: 80%;
+                    #new-button{
+                        display: flex;
                     }
+                        #news-content{
+                            font-size: 18px;
+                            font-weight: 900;
+                            /* border: 1px solid red; */
+                            margin-left: 80%;
+                        }
+                        #news-content-img{
+                            /* border: 1px solid red; */
+                            width: 43px;
+                            height: 40px;
+                            background-image: url('121.png');
+                            margin-left: 3%;
+                        }
                         
 </style>
