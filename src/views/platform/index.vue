@@ -1,75 +1,5 @@
 <template>
   <div>
-    <el-menu
-      :default-active="activeIndex"
-      class="el-menu-demo"
-      mode="horizontal"
-      @select="handleSelect"
-      id="new-main"
-      text-color="#000"
-      active-text-color="#FF9E00"
-    >
-      <el-menu-item index="1" id="new-div-1" @click="chang('全部')"
-        >全部</el-menu-item
-      >
-      <el-menu-item index="2" id="new-div-2" @click="chang('新闻')"
-        >新闻</el-menu-item
-      >
-      <el-menu-item index="3" id="new-div-2" @click="chang('通知')"
-        >通知</el-menu-item
-      >
-      <el-menu-item index="4" id="new-div-2" @click="chang('咨询')"
-        >咨询</el-menu-item
-      >
-    </el-menu>
-
-    <div id="new-form">
-      <template>
-        <el-table
-          :data="tableData"
-          style="width: 100%"
-          cell-style="border: none; 
-                                        margin: 0px;
-                                        padding: 0px;"
-          header-cell-style="border: none;"
-          fit="false"
-        >
-          <el-table-column>
-            <template
-              slot-scope="scope"
-              v-if="targetType == scope.row.type || targetType == '全部'"
-            >
-              <div id="new-form-div">
-                <div id="new-form-div-img"></div>
-                <div id="new-form-div-infor">
-                  <div id="new-infor-top">
-                    <div id="new-infor-type">{{ scope.row.type }}</div>
-                    <div id="new-infor-date">{{ scope.row.date }}</div>
-                  </div>
-                  <div id="new-form-title">
-                    {{ scope.row.title }}
-                  </div>
-                  <div id="new-form-summary">
-                    {{ scope.row.summary }}
-                  </div>
-
-                  <div id="new-button">
-                    <el-button
-                      type="text"
-                      style="color: black"
-                      id="news-content"
-                      >默认按钮</el-button
-                    >
-                    <div id="news-content-img"></div>
-                  </div>
-                </div>
-              </div>
-            </template>
-          </el-table-column>
-        </el-table>
-      </template>
-    </div>
-
     <el-row>
       <el-col :span="24"
         ><div class="grid-content bg-purple">
@@ -86,7 +16,7 @@
     <el-row>
       <el-col :span="24"
         ><div class="grid-content bg-purple-dark">
-          <div id="typer" style="display:flex">
+          <div style="display:flex;flex-wrap:wrap">
             学院分类：
             <div style="padding: 5px; ">
             <el-tag type="warning">全部</el-tag>
@@ -126,7 +56,7 @@
       >
       <el-col :span="24"
         ><div class="grid-content bg-purple-dark">
-          <div id="types" style="display:flex;flex-wrap:wrap ">
+          <div style="display:flex;flex-wrap:wrap">
             专业分类：
             <div style="padding: 5px; ">
             <el-tag type="warning">全部</el-tag>
@@ -242,10 +172,10 @@
     </el-row>
     <el-row>
       <el-col :span="1.5"
-        ><div class="grid-content bg-purple">关键词查询：</div></el-col
+        ><div class="grid-content bg-purple" >关键词查询：</div></el-col
       >
       <el-col :span="4"
-        ><div class="grid-content bg-purple-light">
+        ><div class="grid-content bg-purple-light" style="display:flex;">
           <el-input placeholder="学院名称" v-model="input" clearable>
           </el-input></div
       ></el-col>
@@ -432,24 +362,6 @@
     </el-row>
     <el-pagination background layout="prev, pager, next" :total="1000">
     </el-pagination>
-
-
-    <el-row>
-      <el-col :span="24"
-        ><div class="grid-content bg-purple-dark">
-          <el-table :data="tableData1" stripe style="width: 80%">
-            <el-table-column prop="name" label="姓名" >
-            </el-table-column>
-            <el-table-column prop="academy" label="院校" >
-            </el-table-column>
-            <el-table-column prop="specialty" label="专业"> </el-table-column>
-            <el-table-column prop="class" label="班级"> </el-table-column>
-            <el-table-column prop="number" label="学号"> </el-table-column>
-            <el-table-column prop="grade" label="实验成绩"> </el-table-column>
-            <el-table-column prop="report" label="实验报告"> </el-table-column>
-          </el-table></div
-      ></el-col>
-    </el-row>
   </div>
 </template>
 <script>
@@ -464,230 +376,13 @@ export default {
         "https://cube.elemecdn.com/6/94/4d3ea53c084bad6931a56d5158a48jpeg.jpeg",
       value: 4.5,
       input: "",
-      tableData1: [
-        {
-          name: 'xxx',
-          academy: '建筑学院',
-          specialty: '土木工程',
-          class: '3班',
-          number: '124684651',
-          grade: '99',
-          report: '查看',
-        },
-        {
-          name: 'xxx',
-          academy: '建筑学院',
-          specialty: '土木工程',
-          class: '3班',
-          number: '124684651',
-          grade: '99',
-          report: '查看',
-        },
-        {
-          name: 'xxx',
-          academy: '建筑学院',
-          specialty: '土木工程',
-          class: '3班',
-          number: '124684651',
-          grade: '99',
-          report: '查看',
-        },
-        {
-          name: 'xxx',
-          academy: '建筑学院',
-          specialty: '土木工程',
-          class: '3班',
-          number: '124684651',
-          grade: '99',
-          report: '查看',
-        },
-        {
-          name: 'xxx',
-          academy: '建筑学院',
-          specialty: '土木工程',
-          class: '3班',
-          number: '124684651',
-          grade: '99',
-          report: '查看',
-        },
-        {
-          name: 'xxx',
-          academy: '建筑学院',
-          specialty: '土木工程',
-          class: '3班',
-          number: '124684651',
-          grade: '99',
-          report: '查看',
-        },
-        {
-          name: 'xxx',
-          academy: '建筑学院',
-          specialty: '土木工程',
-          class: '3班',
-          number: '124684651',
-          grade: '99',
-          report: '查看',
-        },
-      ],
-
-      tableData: [
-        {
-          type: "新闻",
-          date: "2016-05-02",
-          title: "重大新闻重大新闻重大新闻重大新闻重大新闻重大新闻重大新闻",
-          summary:
-            "内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介",
-        },
-        {
-          type: "通知",
-          date: "2016-05-04",
-          title: "重大新闻重大新闻重大新闻重大新闻重大新闻重大新闻重大新闻",
-          summary:
-            "内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介",
-        },
-        {
-          type: "咨询",
-          date: "2016-05-01",
-          title: "重大新闻重大新闻重大新闻重大新闻重大新闻重大新闻重大新闻",
-          summary:
-            "内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介",
-        },
-      ],
-      value1: null,
-      value2: null,
-      colors: ["#99A9BF", "#F7BA2A", "#FF9900"],
     };
-  },
-  methods: {
-    handleSelect(key, keyPath) {
-      console.log(key, keyPath);
-    },
-    chang(p) {
-      this.targetType = p;
-      console.log(this.type);
-    },
   },
 };
 </script>
 <style>
-* {
-  margin: 0px;
-  padding: 0px;
-}
-#box {
-  border: 1px solid red;
-}
-#new-main {
-  background: #dedddd;
-  height: 50px;
-}
-#new-div-1 {
-  background: #dedddd;
-  font-weight: 1000;
-  font-size: 18px;
-  height: 40px;
-  line-height: 40px;
-  padding: 0px;
-  margin-left: 70%;
-  margin-right: 2%;
-  margin-top: 5px;
-  margin-bottom: 5px;
-}
-#new-div-2 {
-  background: #dedddd;
-  height: 40px;
-  padding: 0px;
-  line-height: 40px;
-  font-weight: 700;
-  font-size: 18px;
-  margin-right: 2%;
-  margin-top: 5px;
-  margin-bottom: 5px;
-}
-#new-form {
-  /* border: 1px solid red; */
-  margin: 0 auto;
-  width: 90%;
-}
-#new-form-div {
-  margin-top: 15px;
-  width: 100%;
-  height: 310px;
-  border: 2px solid rgb(212, 212, 212);
-  display: flex;
-  justify-content: space-between;
-  box-shadow: 2px 2px 5px #909090;
-}
-#new-form-div-img {
-  width: 40%;
-  height: 300px;
-  /* border: 1px solid red; */
-  margin-bottom: 5px;
-  background-image: url("textnews.png");
-  background-size: 100% 100%;
-}
-#new-form-div-infor {
-  /* border: 1px solid red; */
-  height: 300px;
-  width: 56%;
-}
-#new-infor-top {
-  /* border: 1px solid red; */
-  width: 100%;
-  height: 15%;
-  display: flex;
-}
-#new-infor-type {
-  height: 100%;
-  width: 16%;
-  background: #ff9e00;
-  color: white;
-  font-size: 20px;
-  font-weight: 900;
-  padding: 10px 10px;
-}
-#new-infor-date {
-  /* border: 1px solid red; */
-  margin-left: 4%;
-  width: 200px;
-  margin-top: 3%;
-  font-size: 20px;
-  font-weight: 900;
-}
-#new-form-title {
-  /* border: 1px solid red; */
-  width: 100%;
-  margin-top: 25px;
-  margin-bottom: 25px;
-  font-size: 25px;
-  font-weight: 900;
-  color: black;
-}
-#new-form-summary {
-  /* border: 1px solid red; */
-  width: 80%;
-  height: 40%;
-  color: black;
-  font-size: 18px;
-}
-#new-button {
-  display: flex;
-}
-#news-content {
-  font-size: 18px;
-  font-weight: 900;
-  /* border: 1px solid red; */
-  margin-left: 80%;
-}
-#news-content-img {
-  /* border: 1px solid red; */
-  width: 43px;
-  height: 40px;
-  background-image: url("121.png");
-  margin-left: 3%;
-}
 .sysBox .el-pagination.is-background .el-pager li:not(.disabled).active {
-  background-color: #fd7a3a;
+  background-color: #FD7A3A;  
   color: #fff;
-}
+  }
 </style>
