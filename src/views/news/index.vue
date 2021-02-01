@@ -52,7 +52,6 @@
                   <div id="new-form-summary">
                     {{ scope.row.summary }}
                   </div>
-
                   <div id="new-button">
                     <el-button
                       type="text"
@@ -529,7 +528,6 @@ export default {
           report: '查看',
         },
       ],
-
       tableData: [
         {
           type: "新闻",
