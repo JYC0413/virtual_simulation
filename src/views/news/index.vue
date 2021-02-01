@@ -16,13 +16,13 @@
 
         <div id="new-form">
             <template >
-                <el-table :data="tableData" 
+                <el-table :data="tableData"
+                            show-header
                             style="width: 100%;" 
                             cell-style="border: none; 
                                         margin: 0px;
                                         padding: 0px;" 
-                            header-cell-style="border: none;" 
-                            fit='false'>
+                            header-cell-style="border: none;">
                     <el-table-column>
                         <template slot-scope="scope" v-if="targetType==scope.row.type || targetType=='全部'"> 
                             <div id="new-form-div">
@@ -52,9 +52,14 @@
                 </el-table>
             </template>
         </div>
-
-
-
+        <el-pagination
+            background
+            style="margin-left:80%;
+                    margin-top:15px;
+                    height:20px"
+            layout="prev, pager, next"
+            :total="50">
+        </el-pagination>
 </div>
 </template>
 <script>
@@ -68,18 +73,23 @@
 
         tableData: [{
           type:'新闻',
-          date: '2016-05-02',
+          date: '2018-05-02',
           title: '重大新闻重大新闻重大新闻重大新闻重大新闻重大新闻重大新闻',
           summary: '内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介'
         }, {
           type:'通知',
-          date: '2016-05-04',
-          title: '重大新闻重大新闻重大新闻重大新闻重大新闻重大新闻重大新闻',
+          date: '2026-05-04',
+          title: '重大通知重大通知重大通知重大通知重大通知重大通知重大通知',
           summary: '内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介'
         }, {
           type:'咨询',
-          date: '2016-05-01',
-          title: '重大新闻重大新闻重大新闻重大新闻重大新闻重大新闻重大新闻',
+          date: '2008-05-01',
+          title: '重大咨询重大咨询重大咨询重大咨询重大咨询重大咨询重大咨询',
+          summary: '内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介'
+        },{
+          type:'咨询',
+          date: '2008-05-01',
+          title: '重大咨询重大咨询重大咨询重大咨询重大咨询重大咨询重大咨询',
           summary: '内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介内容简介'
         }]
 
@@ -132,7 +142,7 @@
                 margin-bottom:5px;
             }
         #new-form{
-            /* border: 1px solid red; */
+            border: 1px solid red;
             margin: 0 auto;
             width: 90%;
         }

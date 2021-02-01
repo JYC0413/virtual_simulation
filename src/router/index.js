@@ -1,20 +1,21 @@
 import VueRouter from 'vue-router'
 import Vue from 'vue'
-Vue.use(VueRouter)
 import tou from '@/header/index'
+Vue.use(VueRouter)
+import ExperimentEditor from '@/views/Experiment editor/index.vue'
 
 export default new VueRouter({
-    mode:'history',
+  mode:'history',
     routes:[
-        // {
-        //     path:'/',
-        //     component:() => import ('@/views/shouye/index')
-        // },
-        {
-            path:'/header',
-            component:tou,
-            children:[
-                {
+    {
+        path:'/ExperimentEditor',
+        component:ExperimentEditor,
+        children:[
+            {
+                path:'/synopsis',
+                component:()=>import('@/views/Experiment editor/synopsis.vue')
+            },
+           {
                     path: '/shouye',
                     component: () => import('@/views/shouye/index')
                 },
@@ -22,8 +23,7 @@ export default new VueRouter({
                     path: '/teacher',
                     component: () => import('@/views/teacher/index')
                 },
-            ]
-
-        }
-    ]
+        ]
+    }
+]
 })
