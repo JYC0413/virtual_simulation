@@ -52,7 +52,6 @@
                 </el-table>
             </template>
         </div>
-
         <el-pagination
             background
             style="margin-left:80%;
@@ -63,9 +62,6 @@
         </el-pagination>
 </div>
 </template>
-
-
-
 <script>
   export default {
     data() {

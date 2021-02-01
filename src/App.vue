@@ -10,14 +10,16 @@
 export default {
   name: 'App',
   data () {
-    
-  }
+    return {
+      
+    }
+  },
 }
 </script>
 
 <style>
-  *{
-    margin: 0px;
-    padding: 0px;
-  }
+*{
+  margin: 0px;
+  padding: 0px;
+}
 </style>
