@@ -9,9 +9,12 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
+    "swiper": "^6.4.8",
+    "vue": "^2.6.11",
+    "vue-awesome-swiper": "^4.1.1",
+    "vue-router": "^3.5.1"
     "echarts": "^5.0.1",
     "mux.js": "^5.9.1",
-    "vue": "^2.6.11",
     "vue-video-player": "^5.0.2"
   },
   "devDependencies": {
