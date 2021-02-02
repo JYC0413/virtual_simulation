@@ -20,7 +20,7 @@
           <img src="../../assets/yyy.jpg" style="width: 100%" />
         </span>
         <div class="right_box">
-          <el-tabs type="border-card">
+          <el-tabs type="border-card" v-if="isRegister">
             <el-tab-pane label="快捷登陆">
               <el-form :model="loginForm">
                 <el-form-item style="margin-top: 40px">
@@ -51,9 +51,70 @@
                 </el-form-item>
               </el-form>
             </el-tab-pane>
-            <el-tab-pane label="密码登陆">配置管理</el-tab-pane>
+            <el-tab-pane label="密码登陆">
+              <el-form :model="loginForm">
+                <el-form-item style="margin-top: 40px">
+                  <el-input
+                    placeholder="请输入手机号"
+                    v-model="loginForm.mobile"
+                  >
+                    <template slot="prepend">+86</template>
+                  </el-input>
+                </el-form-item>
+
+                <el-form-item>
+                  <el-input
+                    placeholder="请输入短信验证码"
+                    v-model="loginForm.password"
+                  >
+                    <template slot="append">获取短信验证码</template>
+                  </el-input>
+                </el-form-item>
+
+                <el-form-item style="width: 100%">
+                  <el-button type="primary" style="width: 100%">登陆</el-button>
+                </el-form-item>
+                <el-form-item>
+                  <el-button type="primary" style="width: 100%" plain
+                    >微信扫码注册</el-button
+                  >
+                </el-form-item>
+               
+              </el-form>
+              
+            </el-tab-pane>
+             <div>
+                  没有账号?
+                  <span class="ljzc" @click='handleRegister()'>立即注册</span>
+                </div>
           </el-tabs>
+          <div v-else>
+               <el-form :model="RegisterForm">
+                <el-form-item style="margin-top: 40px">
+                 <el-input v-model="RegisterForm.pwd" placeholder="请输入密码"></el-input>
+                </el-form-item>
+
+                <el-form-item>
+                  <el-input v-model="RegisterForm.name" placeholder="请输入姓名"></el-input>
+                </el-form-item>
+                <el-form-item>
+                  <el-input v-model="RegisterForm.input" placeholder="请输入专业"></el-input>
+                </el-form-item>
+                <el-form-item>
+                  <el-input v-model="RegisterForm.input" placeholder="请输入班级"></el-input>
+                </el-form-item>
+                  <el-form-item>
+                  <el-input v-model="RegisterForm.input" placeholder="请输入学号"></el-input>
+                </el-form-item>
+
+                <el-form-item style="width: 100%">
+                  <el-button type="primary" style="width: 100%">注册</el-button>
+                </el-form-item>
+                
+              </el-form>
+          </div>
         </div>
+        
       </el-main>
 
       <span style="text-align: center">
@@ -78,13 +139,23 @@ import { login } from "@/api/index";
 export default {
   data() {
     return {
+      isRegister:true,
       loginForm: {
         mobile: "",
         password: "",
       },
+      RegisterForm:{
+        pwd:'',
+        input:'',
+        name:''
+      }
     };
   },
   methods: {
+    handleRegister(){
+      console.log(this.isRegister)
+      this.isRegister=false;
+    },
     onSubmit() {
       // let data = {
       //   password: this.password,
@@ -137,11 +208,15 @@ export default {
   margin-top: 50px;
 }
 .el-tabs--border-card {
-  margin-top: 5%;
+  /* margin-top: 5%; */
   border: none;
   box-shadow: none;
 }
 .el-form .el-form-item {
   margin-bottom: 40px;
+}
+.ljzc{
+  color: red;
+  cursor: pointer;
 }
 </style>

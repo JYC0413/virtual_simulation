@@ -10,7 +10,7 @@ export default new VueRouter({
 
     routes:[
         {
-            path:'/login',
+            path:'/',
             component:()=>import('@/views/login/index.vue')
         },
     {
