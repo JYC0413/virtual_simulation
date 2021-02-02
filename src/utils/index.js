@@ -21,3 +21,13 @@ export function login(mobile,code,password,name){
         // params:data
     })
 }
+
+export function Testlogin(data){
+    return request({
+        url:'/admin/register',
+        method:'post',
+        data:data
+        //?
+        // params:data
+    })
+}

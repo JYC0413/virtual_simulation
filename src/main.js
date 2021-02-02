@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import App from './App.vue'
-import News from '@/views/news/index.vue'
-import editor from '@/views/Experiment editor/index.vue'
+// import News from '@/views/news/index.vue'
+// import editor from '@/views/Experiment editor/index.vue'
 import router from './router'
 import ElementUI from 'element-ui';
 import echarts from 'echarts'

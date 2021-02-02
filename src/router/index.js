@@ -1,12 +1,18 @@
 import VueRouter from 'vue-router'
 import Vue from 'vue'
-import tou from '@/header/index'
+// import tou from '@/header/index'
 Vue.use(VueRouter)
+
 import ExperimentEditor from '@/views/Experiment editor/index.vue'
 
 export default new VueRouter({
   mode:'history',
+
     routes:[
+        {
+            path:'/login',
+            component:()=>import('@/views/login/index.vue')
+        },
     {
         path:'/ExperimentEditor',
         component:ExperimentEditor,
