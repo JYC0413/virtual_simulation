@@ -5,7 +5,7 @@
                 <div id="exp-router-back-img"></div>
                 <el-button id="exp-router-back-write" type="text">返回</el-button>
             </div>
-                <el-menu default-active="2" 
+                <el-menu default-active="1" 
                         class="el-menu-vertical-demo" 
                         style="margin-top:60px;border:none;"
                         active-text-color="#FF9E00">
