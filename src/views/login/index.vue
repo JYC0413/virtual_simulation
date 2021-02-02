@@ -20,6 +20,7 @@
           <img src="../../assets/yyy.jpg" style="width: 100%" />
         </span>
         <div class="right_box">
+          <!-- 登陆切换 -->
           <el-tabs type="border-card" v-if="isRegister">
             <el-tab-pane label="快捷登陆">
               <el-form :model="loginForm">
@@ -88,6 +89,7 @@
                   <span class="ljzc" @click='handleRegister()'>立即注册</span>
                 </div>
           </el-tabs>
+          <!-- 注册 -->
           <div v-else>
                <el-form :model="RegisterForm">
                 <el-form-item style="margin-top: 40px">
@@ -152,6 +154,7 @@ export default {
     };
   },
   methods: {
+    // 点击注册的时候 根据isRegister 做判断，跳转
     handleRegister(){
       console.log(this.isRegister)
       this.isRegister=false;
@@ -161,6 +164,7 @@ export default {
       //   password: this.password,
       //   mobile: this.mobile,
       // };
+      //this.loginForm  通过objecr对象绑定，在el-form里面绑定字段
       login(this.loginForm).then((res) => {
         console.log(res);
         if (res.status == 1) {
