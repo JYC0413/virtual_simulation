@@ -55,8 +55,7 @@
         <el-pagination
             background
             style="margin-left:80%;
-                    margin-top:15px;
-                    height:20px"
+                    margin-top:15px;"
             layout="prev, pager, next"
             :total="50">
         </el-pagination>
@@ -142,7 +141,7 @@
                 margin-bottom:5px;
             }
         #new-form{
-            border: 1px solid red;
+            /* border: 1px solid red; */
             margin: 0 auto;
             width: 90%;
         }
@@ -160,7 +159,7 @@
                     height: 300px;
                     /* border: 1px solid red; */
                     margin-bottom: 5px;
-                    background-image: url('textnews.png');
+                    background-image: url('news-test-img.png');
                     background-size:100% 100%;
                 }
                 #new-form-div-infor{
@@ -220,7 +219,7 @@
                             /* border: 1px solid red; */
                             width: 43px;
                             height: 40px;
-                            background-image: url('121.png');
+                            background-image: url('../../assets/news-Fingers.png');
                             margin-left: 3%;
                         }
                         

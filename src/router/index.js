@@ -30,6 +30,10 @@ export default new VueRouter({
                     component: () => import('@/views/teacher/index')
                 },
         ]
+    },
+    {
+        path:'/news',
+        component:()=>import('@/views/news/index.vue')
     }
 ]
 })

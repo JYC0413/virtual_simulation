@@ -68,7 +68,7 @@ export default {
                         /* border: 1px solid red; */
                         width: 39px;
                         height: 30px;
-                        background-image: url('exp-back.png');
+                        background-image: url('../../assets/exp-back.png');
                     }
                     #exp-router-back-write{
                         padding-top: 5px;
