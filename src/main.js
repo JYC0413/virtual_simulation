@@ -14,6 +14,7 @@ import 'vue-video-player/src/custom-theme.css'
 import 'video.js/dist/video-js.css'
 import 'videojs-flash'
 import 'videojs-contrib-hls'
+import '@/styles/element-variables.scss'
 
 Vue.prototype.$echarts = echarts
 Vue.use(ElementUI);
