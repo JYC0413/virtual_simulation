@@ -48,7 +48,7 @@
                 </div>
                 <div id="new-button">
                   
-                    <el-button type="warning" id="synopsisBtton">实验编辑</el-button>
+                  <router-link to="/synopsis"><el-button type="warning" id="synopsisBtton">实验编辑</el-button></router-link>
                     <el-button type="warning" id="synopsisBtton">考试管理</el-button>
                     <el-button type="warning" id="synopsisBtton">实验报告管理</el-button>
                 
@@ -234,7 +234,7 @@
     width: 100%;
     height: 200px;
     margin: 5px;
-    background-image: url('shiyan.jpg');
+    background-image: url('/assets/shiyan.jpg');
     background-size: 100% 100%;
     float: left;
     position: relative;

@@ -10,7 +10,7 @@
             <el-menu-item index="1">首页</el-menu-item>
             <el-menu-item index="2">实验中心</el-menu-item>
             <el-menu-item index="3">咨询论坛</el-menu-item>
-            <el-menu-item index="4">教师中心</el-menu-item>
+            <router-link to="/teacher"><el-menu-item index="4">教师中心</el-menu-item></router-link>
             <el-menu-item index="5">关于我们</el-menu-item>
           </el-menu>
         </div>
@@ -39,7 +39,7 @@
     height: 50px;
     width: 150px;
     float: left;
-    background-image: url('logo.png');
+    background-image: url('/assets/logo.png');
   }
   #vr{
     margin-top: 10px;
@@ -47,7 +47,7 @@
     height: 50px;
     width: 300px;
     float: left;
-    background-image: url('vr.png');
+    background-image: url('/assets/vr.png');
   }
   #user{
     width:60px;

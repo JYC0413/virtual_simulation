@@ -38,7 +38,7 @@
       <div>
       <el-row>
         <el-col :span="6" v-for="(o, index) in 3" :key="o" :offset="index > 0 ? 3 : 0">
-            <img src="/vue_xu/my_vue/src/views/img/test0.jpg" class="image">
+            <img src="" class="image">
             <div style="padding: 14px;">
               <span>实验课程标题最多25个字<br>实验教师姓名 学院名称10个字</span>
               <i class="el-icon-d-arrow-right"></i>
