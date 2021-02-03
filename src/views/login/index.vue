@@ -188,7 +188,7 @@
         </el-main>
       </div>
 
-      <span class="footer" style="text-align: center">
+      <span class="footer" style="text-align: center;">
         <el-footer> Copyright © 慧科教育 2020-2050 </el-footer>
       </span>
     </el-container>
@@ -421,6 +421,6 @@ export default {
   height: 80px;
   font-size: 15px;
   color: rgb(153, 153, 153);
-  padding-top: 50px;
+  padding-top:60px;
 }
 </style>
