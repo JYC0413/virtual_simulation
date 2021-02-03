@@ -116,19 +116,19 @@
               <el-form :model="loginForm">
                 <el-form-item style="margin-top: 50px; width: 375px">
                   <el-input
-                    placeholder="请输入手机号"
-                    v-model="loginForm.mobile"
+                    placeholder="请输入账户名称"
+                    v-model="loginForm.username"
                   >
-                    <template slot="prepend">+86</template>
+                   
                   </el-input>
                 </el-form-item>
 
-                <el-form-item style="margin-top: 10px; width: 375px">
+                <el-form-item style="width: 375px; height: 35px;">
                   <el-input
-                    placeholder="请输入短信验证码"
+                    placeholder="请输入账户密码"
                     v-model="loginForm.password"
                   >
-                    <template slot="append">获取短信验证码</template>
+                    
                   </el-input>
                 </el-form-item>
 
@@ -186,7 +186,7 @@
               <div
                 style="
                   margin-top: 30px;
-                  padding-left: 30px;
+                  padding-left: 20px;
                   padding-right: 15px;
                 "
               >
@@ -244,6 +244,7 @@
                   padding-right: 15px;
                 "
               >
+              
                 <p style="line-height: 0; margin-bottom: 5px">
                   <label>
                     <input type="checkbox" />
@@ -298,6 +299,7 @@
                     >《用户隐私协议》</span
                   >
                 </p>
+              
               </div>
 
               <div style="padding-top: 25px; padding-left: 15px">
@@ -367,6 +369,7 @@ export default {
       loginForm: {
         mobile: "",
         password: "",
+        username:"",
       },
       RegisterForm: {
         pwd: "",
