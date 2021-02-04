@@ -3,7 +3,7 @@ import Vue from 'vue'
 // import tou from '@/header/index'
 Vue.use(VueRouter)
 
-import ExperimentEditor from '@/views/Experiment editor/hander.vue'
+import ExperimentEditor from '@/views/Experiment editor/index.vue'
 import Toutal from '@/header/index.vue'
 export default new VueRouter({
   mode:'history',
@@ -27,7 +27,7 @@ export default new VueRouter({
                 },
                 {
                     path:'/experiment',
-                    component:()=>import('@/views/Experiment editor/index.vue')
+                    component:()=>import('@/views/Experimental center/index.vue')
                 },
                 {
                     path:'/news',
